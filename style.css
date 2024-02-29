@@ -49,3 +49,9 @@ body {
 .endscreen-text {
     text-align: center;
 }
+
+.button-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

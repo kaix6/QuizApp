@@ -50,7 +50,6 @@ let questions = [
 let amountOfRightAnswers = 0; // counter für endscreen für richtige fragen
 let currentQuestion = 0;
 
-
 function init() {
   let amounts = questions.length; // schaut, wie lange das Array questions ist
   document.getElementById("amount").innerHTML = `${amounts}`; // fügt es in "amount" ein. gesamtanzahl unten
@@ -97,6 +96,7 @@ function answer(selection) {
     // holt aus Array right_answer und vergleicht obs übereinstimmt
     document.getElementById(selection).classList.add("answer-right"); // fügt klasse hinzu
     amountOfRightAnswers++; // setzt counter +1 für den Endscreen
+
   } else {
     document.getElementById(selection).classList.add("answer-wrong"); // fügt klasse hinzu
     document.getElementById(idOfRightAnswer).classList.add("answer-right"); // fügt klasse hinzu
@@ -124,4 +124,16 @@ function resetClasses() {
   document.getElementById("answer_3").classList.remove("answer-right");
   document.getElementById("answer_4").classList.remove("answer-wrong");
   document.getElementById("answer_4").classList.remove("answer-right");
+}
+
+function restartGame() {
+    amountOfRightAnswers = 0; // setzt globale var wieder auf 0
+    currentQuestion = 0; // setzt globale var wieder auf 0
+    
+    init();
+
+    document.getElementById('endscreen').style = 'display: none'; // lässt endscreen verschwinden
+    document.getElementById('question-screen').style = ''; // zeigt wieder karte an
+    document.getElementById('pic-endscreen').style = ''; // zeigt wieder anfangspic an
+    document.getElementById('footer-endscreen').style = ''; // zeigt den footer wieder an
 }
