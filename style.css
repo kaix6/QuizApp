@@ -37,21 +37,21 @@ body {
 }
 
 .endscreen-headline {
-    text-align: center;
+  text-align: center;
 }
 
 .enscreen-img {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .endscreen-text {
-    text-align: center;
+  text-align: center;
 }
 
 .button-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
